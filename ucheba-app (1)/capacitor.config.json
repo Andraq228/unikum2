@@ -1,0 +1,20 @@
+{
+  "appId": "ru.ucheba.app",
+  "appName": "Учёба",
+  "webDir": "www",
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    },
+    "SplashScreen": {
+      "launchShowDuration": 800,
+      "backgroundColor": "#070718",
+      "showSpinner": false
+    }
+  },
+  "backgroundColor": "#070718",
+  "android": {
+    "backgroundColor": "#070718",
+    "allowMixedContent": false
+  }
+}

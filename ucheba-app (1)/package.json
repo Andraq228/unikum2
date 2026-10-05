@@ -1,0 +1,78 @@
+{
+  "name": "ucheba",
+  "productName": "Учёба",
+  "version": "1.0.0",
+  "description": "Учебное приложение: дедлайны, фото-калькулятор, рефераты, ИИ-чат",
+  "main": "main.js",
+  "author": "Ucheba",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0"
+  },
+  "build": {
+    "appId": "ru.ucheba.app",
+    "productName": "Учёба",
+    "copyright": "Учёба",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "www/**"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Учёба",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/installerSidebar.bmp",
+      "license": "build/license.txt",
+      "language": "1049",
+      "installerLanguages": [
+        "ru_RU"
+      ],
+      "multiLanguageInstaller": false,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "uninstallDisplayName": "Учёба",
+      "artifactName": "Ucheba-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Ucheba-Portable-${version}.${ext}"
+    }
+  }
+}
